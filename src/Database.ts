@@ -35,14 +35,22 @@ export const recommendStoreList = [
 export const storeList = [
   {
     name: "한결보쌈 길동점",
-    imgList: ["", "", ""],
+    imgList: [
+      "https://byline.network/wp-content/uploads/2020/01/baemin-300x300.png",
+      "https://byline.network/wp-content/uploads/2020/01/baemin-300x300.png",
+      "https://byline.network/wp-content/uploads/2020/01/baemin-300x300.png",
+    ],
     score: 4.9,
     orderMin: 12000,
     deliveryMin: 1500,
   },
   {
     name: "길동골목냉면",
-    imgList: ["", "", ""],
+    imgList: [
+      "https://byline.network/wp-content/uploads/2020/01/baemin-300x300.png",
+      "https://byline.network/wp-content/uploads/2020/01/baemin-300x300.png",
+      "https://byline.network/wp-content/uploads/2020/01/baemin-300x300.png",
+    ],
     score: 4.9,
     orderMin: 15000,
     deliveryMin: 2000,

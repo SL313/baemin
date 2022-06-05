@@ -2,16 +2,43 @@
   <div class="store-card">
     <table>
       <tr>
-        <td rowspan="2" style="width: 70%" class="img1"></td>
-        <td style="width: 30%" class="img2"></td>
+        <td
+          rowspan="2"
+          style="width: 70%"
+          class="img1"
+          v-bind:style="{
+            backgroundImage: `url(${
+              img1 ||
+              'https://byline.network/wp-content/uploads/2020/01/baemin-300x300.png'
+            })`,
+          }"
+        ></td>
+        <td
+          style="width: 30%"
+          class="img2"
+          v-bind:style="{
+            backgroundImage: `url(${
+              img2 ||
+              'https://byline.network/wp-content/uploads/2020/01/baemin-300x300.png'
+            })`,
+          }"
+        ></td>
       </tr>
       <tr>
-        <td class="img3"></td>
+        <td
+          class="img3"
+          v-bind:style="{
+            backgroundImage: `url(${
+              img3 ||
+              'https://byline.network/wp-content/uploads/2020/01/baemin-300x300.png'
+            })`,
+          }"
+        ></td>
       </tr>
     </table>
     <div>
       <b-row class="title-box">
-        <b-col>미분당 길동점</b-col>
+        <b-col>{{ name || "이름 없음" }}</b-col>
       </b-row>
       <b-row>
         <!-- <b-col>
@@ -28,44 +55,43 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-
 export default defineComponent({
   name: "StoreBigCard",
+  props: {
+    img1: String,
+    img2: String,
+    img3: String,
+    name: String,
+  },
 });
 </script>
 
 <style scoped>
 .img1 {
-  background-image: url("http://cdn.cnn.com/cnnnext/dam/assets/181114130138-korean-food-2620014201204004k-jeonju-bibimbap.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
   border-top-left-radius: 15px;
 }
 .img2 {
-  background-image: url("https://www.kworldnow.com/wp-content/uploads/2020/08/korean-food-1.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-top-right-radius: 15px;
 }
 .img3 {
-  background-image: url("https://i.pinimg.com/originals/c8/94/31/c89431717459c8a63fbfcc92e47085a8.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 table {
   width: 100%;
   height: 150px;
 }
-
 div.store-card {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin-bottom: 15px;
 }
-
 .title-box {
   padding: 15px;
   text-align: left;

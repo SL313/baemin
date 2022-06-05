@@ -22,7 +22,7 @@
       ></horizontal-grid>
     </section-card>
     <section-card>
-      <store-big-card-grid></store-big-card-grid>
+      <store-big-card-grid :storeList="storeList"></store-big-card-grid>
     </section-card>
   </div>
 </template>
@@ -52,6 +52,7 @@ export default defineComponent({
     return {
       recommendStoreList: useSelector((state) => state.orders).value
         .recommendStoreList,
+      storeList: useSelector((state) => state.orders).value.storeList,
       menuList: [
         {
           title: "1인분",
